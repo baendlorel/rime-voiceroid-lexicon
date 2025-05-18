@@ -1,6 +1,7 @@
 import { join } from 'node:path';
 import { mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import assert from 'node:assert';
+import { inspect } from 'node:util';
 
 const read = (p: string) => readFileSync(p, { encoding: 'utf-8' });
 
@@ -10,19 +11,22 @@ const LexiconEntryMapper = (entry: Entry | EntryWithWeight) => {
   // (o) => `${o[0]}\t${o[1]}\t${o[2] ?? ''}`;
   const len = entry.length;
   if (typeof entry[len - 1] === 'number') {
-    assert(len <= 2, '带有权重的,长度不应该小于2');
-    assert(isAllString(entry.slice(0, len - 1)), '除了权重外应该都是string');
+    assert(len > 2, '带有权重的,长度不应该小于2，' + inspect(entry));
+    assert(
+      isAllString(entry.slice(0, len - 1)),
+      '除了权重外应该都是string，' + inspect(entry)
+    );
 
-    const words = entry.slice(0, len - 2);
+    const words = [...new Set(entry.slice(0, len - 2))];
     const pinyin = entry[len - 2];
     const weight = entry[len - 1];
 
     return words.map((o) => `${o}\t${pinyin}\t${weight}`).join('\n');
   }
 
-  assert(len <= 1, '长度不应该小于1');
-  assert(isAllString(entry), '应该都是string');
-  const words = entry.slice(0, len - 1);
+  assert(len > 1, '长度不应该小于1，' + inspect(entry));
+  assert(isAllString(entry), '应该都是string，' + inspect(entry));
+  const words = [...new Set(entry.slice(0, len - 1))];
   const pinyin = entry[len - 1];
   return words.map((o) => `${o}\t${pinyin}`).join('\n');
 };
@@ -42,15 +46,15 @@ const main = () => {
       read(join('src', filets))
         .replace(/^l/, '')
         .replace(/\;[\s]+$/, '')
-    ) as Lexicon;
+    ) as (Entry | EntryWithWeight)[];
 
     const file = filets.replace(/\.ts$/, '');
     const dictName = `${file}.dict.yaml`;
-    const entriesStr = dict.list.map(LexiconEntryMapper).join('\n');
+    const entriesStr = dict.map(LexiconEntryMapper).join('\n');
     const head = `---
-name: ${dict.name ?? file}
-version: ${dict.version ?? version}
-sort: ${dict.sort ?? 'by_weight'}
+name: ${file}
+version: ${version}
+sort: by_weight
 ...`;
 
     const content = `${head}\n${entriesStr}\n`;

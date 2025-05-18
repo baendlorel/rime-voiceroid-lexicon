@@ -1,6 +1,6 @@
 l([
   // #  9期生
-  ['Voidoll', 'Voidoll', ''],
+  // ['Voidoll', 'Voidoll', ''],
   ['存子', 'ぞん子', 'cun zi'],
   ['中部剑', '中部つるぎ', 'zhong bu jian'],
 
