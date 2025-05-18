@@ -40,9 +40,8 @@ const main = () => {
   for (const filets of files) {
     const dict = eval(
       read(join('src', filets))
-        .trim()
-        .replace(/^create/, '')
-        .replace(/\;$/, '')
+        .replace(/^l/, '')
+        .replace(/\;[\s]+$/, '')
     ) as Lexicon;
 
     const file = filets.replace(/\.ts$/, '');

@@ -11,7 +11,7 @@ declare type Lexicon = {
   list: (Entry | EntryWithWeight)[];
 } & LexiconOptions;
 
-declare function create(
+declare function l(
   entries: (Entry | EntryWithWeight)[],
   options?: LexiconOptions
 ): Lexicon;
