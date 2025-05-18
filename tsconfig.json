@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ESNext",
+    "resolveJsonModule": false,
+    "moduleResolution": "node",
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "declaration": false, // 是否生成声明文件, 选择false然后由rollup配置全权掌握
+    "esModuleInterop": true, // 可选，增强兼容性
+    "strict": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  },
+  "include": ["build.ts", "src/**/*.ts", "global.d.ts"]
+}

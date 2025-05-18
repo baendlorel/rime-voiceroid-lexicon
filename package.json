@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Rime 计算机与互联网相关词库（Voiceroid 适配）",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build": "tsx build.ts"
   },
