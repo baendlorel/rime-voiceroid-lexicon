@@ -1,0 +1,22 @@
+{
+  "name": "rime-voiceroid-lexicon",
+  "version": "1.0.0",
+  "description": "Rime 计算机与互联网相关词库（Voiceroid 适配）",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsx build.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baendlorel/rime-voiceroid-lexicon.git"
+  },
+  "author": {
+    "name": "KasukabeTsumugi",
+    "email": "futami16237@gmail.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.15.18",
+    "tsx": "^4.19.4"
+  }
+}
