@@ -5,7 +5,7 @@ l([
   ['弦卷真纪', '弦巻マキ', 'xian juan zhen ji'],
   ['琴叶茜', '琴葉茜', 'qin ye qian'],
   ['琴叶茜', '琴葉茜', 'qin ye xi'],
-  ['琴叶葵', '琴葉茜', 'qin ye kui'],
+  ['琴叶葵', '琴葉葵', 'qin ye kui'],
 
   // 其他的
   ['东北俊子', '東北ずん子', 'dong bei jun zi'],

@@ -3,10 +3,10 @@ name: aitalk
 version: 1.0.0
 sort: by_weight
 ...
-结月缘	jun da meng
-結月ゆかり	jun da meng
-绁星灯	si guo mei tan
-紲星あかり	si guo mei tan
+结月缘	jie yue yuan
+結月ゆかり	jie yue yuan
+绁星灯	xie xing deng
+紲星あかり	xie xing deng
 弦卷真纪	xian juan zhen ji
 弦巻マキ	xian juan zhen ji
 琴叶茜	qin ye qian
@@ -14,7 +14,7 @@ sort: by_weight
 琴叶茜	qin ye xi
 琴葉茜	qin ye xi
 琴叶葵	qin ye kui
-琴葉茜	qin ye kui
+琴葉葵	qin ye kui
 东北俊子	dong bei jun zi
 東北ずん子	dong bei jun zi
 俊子	jun zi
@@ -77,8 +77,8 @@ sort: by_weight
 来果	lai guo
 夜语飞羽	ye yu fei yu
 夜語トバリ	ye yu fei yu
-高远咲	
-高遠咲	
+高远咲	gao yuan xiao
+高遠咲	gao yuan xiao
 纺乃世词音	fang nai shi ci yin
 紡乃世詞音	fang nai shi ci yin
 砂糖小飒	sha tang xiao sa
@@ -172,8 +172,8 @@ WhiteCUL	whitecul
 青山龍星	qing shan long xing
 冥鸣阳葵	ming ming yang kui
 冥鳴ひまり	ming ming yang kui
-九州空	jiu zhou tian kong
-九州そら	jiu zhou tian kong
+九州空	jiu zhou kong
+九州そら	jiu zhou kong
 春日部紬	chun ri bu chou
 春日部つむぎ	chun ri bu chou
 雨晴羽雨	yu qing
